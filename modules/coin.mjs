@@ -21,6 +21,7 @@ export function coinFlip() {
   } else {
     return "tails";
   }
+  process.exit(1);
 }
 
 /** Multiple coin flips
