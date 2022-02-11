@@ -49,6 +49,7 @@ export function coinFlips(flips) {
     coins[flips-i] = coinFlip();
   }
   return coins;
+  process.exit(1);
 }
 
 /** Count multiple flips
@@ -75,6 +76,7 @@ export function countFlips(array) {
     }
   }
   return {heads: heads, tails: tails};
+  process.exit(1);
 }
 
 /** Flip a coin!
@@ -97,6 +99,7 @@ export function flipACoin(call) {
     result = "lose";
   }
   return {call: call, flip: flip, result: result};
+  process.exit(1);
 }
 
 /** Export 
