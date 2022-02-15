@@ -1,5 +1,9 @@
 import { flipACoin } from "./modules/coin.mjs";
-let call = process.argv.slice(2)[0].slice(7);
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url);
+const args = require("minimist")(process.argv.slice(2));
+args["call"];
+const call = args.call;
 if (call != "heads" && call != "tails") {
     console.error("Wrong input.");
 } else {
